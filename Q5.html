@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5</title>
+</head>
+<body>
+    <script>
+        // Set up a blank array to contain the final multiplication table
+let multiplicationTable = [];
+
+// Set the number of values to multiply with one another and show the results for
+const value = 10;
+
+// Create an outer loop to iterate through each row
+for (let i = 1; i <= value; i++) {
+    // Create a temporary array to store the row values
+    let row = [];
+    
+    // Add an inner loop for the column values
+    for (let j = 1; j <= value; j++) {
+        // Push the multiplied row and column values to the temporary array
+        row.push(i * j);
+    }
+    
+    // Add the temporary row data to the main array of the final table
+    multiplicationTable.push(row);
+}
+
+// Print the final multiplication table
+for (let i = 0; i < multiplicationTable.length; i++) {
+    document.write(multiplicationTable[i].join('\t'));
+}
+
+    </script>
+</body>
+</html>

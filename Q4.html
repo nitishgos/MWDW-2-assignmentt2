@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+</head>
+<body>
+    <script>
+        // Step 1: Create an array of choices
+const choices = ["Rock", "Paper", "Scissors"];
+
+// Step 2: Generate random selections for player and computer
+const playerIndex = Math.floor(Math.random() * 3); // Generates random number between 0 and 2
+const computerIndex = Math.floor(Math.random() * 3);
+
+// Step 3: Create a variable to hold the response message
+let resultMessage;
+
+// Step 4: Handle tie scenario
+if (playerIndex === computerIndex) {
+    resultMessage = "It's a tie!";
+} else {
+    // Step 5: Apply game logic
+    if (
+        (playerIndex === 0 && computerIndex === 2) || // Rock beats Scissors
+        (playerIndex === 1 && computerIndex === 0) || // Paper beats Rock
+        (playerIndex === 2 && computerIndex === 1)    // Scissors beats Paper
+    ) {
+        resultMessage = "You win!";
+    } else {
+        resultMessage = "Computer wins!";
+    }
+}
+
+// Step 6: Output the result message
+document.write(`Player chose ${choices[playerIndex]}. Computer chose ${choices[computerIndex]}. ${resultMessage}`);
+
+    </script>
+</body>
+</html>

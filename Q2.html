@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+    <script>
+        // Define a class for store items
+class StoreItem {
+  constructor(name, model, cost, quantity) {
+    this.name = name;
+    this.model = model;
+    this.cost = cost;
+    this.quantity = quantity;
+  }
+}
+
+// Create an array to hold the inventory
+let inventory = [];
+
+// Create three items
+let item1 = new StoreItem("Laptop", "ABC123", 999, 10);
+let item2 = new StoreItem("Smartphone", "XYZ456", 599, 20);
+let item3 = new StoreItem("Tablet", "DEF789", 299, 15);
+
+// Add items to the inventory array
+inventory.push(item1, item2, item3);
+
+// Log the inventory array
+document.write("Inventory Array:");
+document.write(inventory);
+
+// Access the quantity element of the third item and log it
+document.write("\nQuantity of the third item:");
+document.write(inventory[2].quantity);
+
+// Experiment by adding and accessing more elements
+let item4 = new StoreItem("Headphones", "PQR321", 99, 30);
+inventory.push(item4);
+
+document.write("\nUpdated Inventory Array:");
+document.write(inventory);
+
+    </script>
+</body>
+</html>

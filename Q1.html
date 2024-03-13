@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+    <script>
+      const theList = ['Laurence', 'Svekis', true, 35, null, undefined, {test: 'one', score: 55}, ['one', 'two']];
+
+// Remove the first and last items
+theList.shift();
+theList.pop();
+
+// Add "FIRST" to the start of the array
+theList.unshift("FIRST");
+
+// Assign "hello World" to the fourth item value
+theList[3] = "hello World";
+
+// Assign "MIDDLE" to the third index value
+theList[2] = "MIDDLE";
+
+// Add "LAST" to the last position in the array
+theList.push("LAST");
+
+// Output the modified array to the console
+console.log(theList);
+
+    </script>
+</body>
+</html>

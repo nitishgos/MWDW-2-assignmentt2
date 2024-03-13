@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6</title>
+</head>
+<body>
+    <script>
+        function countUpToTen(startNumber) {
+  // Base case: if the startNumber is greater than 10, stop recursion
+  if (startNumber > 10) {
+    return;
+  }
+
+  // Print the current number
+  document.write(startNumber+"<br>");
+
+  // Recursive call with the next number
+  countUpToTen(startNumber + 1);
+}
+
+// Invoke the function with different start numbers
+document.write("Counting from 1:<br>");
+countUpToTen(1);
+
+document.write("\nCounting from 5:<br>");
+countUpToTen(5);
+
+document.write("\nCounting from 8:<br>");
+countUpToTen(8);
+
+    </script>
+</body>
+</html>

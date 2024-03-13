@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q7</title>
+</head>
+<body>
+    <script>
+        // First function
+const outputOne = () => {
+  document.write("One<br>");
+};
+
+// Second function
+const outputTwo = () => {
+  document.write("Two<br>");
+};
+
+// Third function
+const outputThreeThenOneAndTwo = () => {
+  document.write("Three<br>");
+  outputOne();
+  outputTwo();
+};
+
+// Fourth function
+const outputFourThenOne = () => {
+  document.write("Four<br>");
+  setTimeout(() => {
+    outputOne();
+    outputThreeThenOneAndTwo();
+  }, 0);
+};
+
+outputFourThenOne();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9</title>
+</head>
+<body>
+    <script>
+        class MenuItemsPriceCalculator {
+  constructor(item1Price, item2Price, quantityItem1, quantityItem2) {
+    this._item1Price = item1Price;
+    this._item2Price = item2Price;
+    this._quantityItem1 = quantityItem1;
+    this._quantityItem2 = quantityItem2;
+  }
+
+  calculateTotalCost() {
+    return (this._item1Price * this._quantityItem1) + (this._item2Price * this._quantityItem2);
+  }
+
+  get totalCost() {
+    return this.calculateTotalCost();
+  }
+}
+
+// Create objects with different combinations of menu selections
+const order1 = new MenuItemsPriceCalculator(5, 8, 2, 3);
+const order2 = new MenuItemsPriceCalculator(6, 9, 4, 2);
+const order3 = new MenuItemsPriceCalculator(4, 7, 1, 5);
+
+// Output the total cost for each order
+console.log("Total cost for order 1: $" + order1.totalCost);
+console.log("Total cost for order 2: $" + order2.totalCost);
+console.log("Total cost for order 3: $" +order3.totalCost);
+
+    </script>
+</body>
+</html>

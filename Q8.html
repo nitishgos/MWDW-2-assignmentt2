@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8</title>
+</head>
+<body>
+    <script>
+        class Employee {
+    constructor(firstName, lastName, yearsWorked) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.yearsWorked = yearsWorked;
+    }
+
+    getDetails() {
+        return `${this.firstName} ${this.lastName} has worked at the company for ${this.yearsWorked} years.`;
+    }
+}
+
+// Create employees
+const employees = [
+    new Employee("John", "Doe", 5),
+    new Employee("Jane", "Smith", 8),
+    new Employee("Alice", "Johnson", 3)
+];
+
+// Iterate and output details
+employees.forEach(employee => {
+    document.write(employee.getDetails()+"<br>");
+});
+
+    </script>
+</body>
+</html>
